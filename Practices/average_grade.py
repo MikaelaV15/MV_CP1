@@ -12,4 +12,5 @@ average = (cs_grade + math_grade + seminary_grade + advisory_grade + english_gra
 average_grade = average/7
 print(average_grade)
 
-round(average_grade ,2)
+round(average_grade , 2) 
+float(average_grade)
