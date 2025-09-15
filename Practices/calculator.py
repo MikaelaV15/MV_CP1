@@ -10,4 +10,4 @@ print(number_1/number_2)
 print(number_1//number_2)  
 print(number_1%number_2) 
 
-print(round(0.83333333333333334)) # 0.83
+print(f"")
