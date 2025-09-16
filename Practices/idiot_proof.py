@@ -7,5 +7,5 @@ phone_number = input().strip()
 gpa = input("What is your gpa?: ")
 gpa = input().strip()
 
-print = ("Hello" , full_name,)
+print = ("Hello" , full_name, "that is a good number")
 
