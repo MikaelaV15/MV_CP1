@@ -29,3 +29,16 @@ number1 = input()
 
 print("Give me a noun")
 noun3 = input()
+
+print("Give me an adjective")
+adjective1 = input()
+
+print("Give me a verb")
+verb1 = input()
+
+print("Give me a verb")
+verb2 = input()
+
+print("Give me a plural noun")
+plural_noun4 = input()
+
