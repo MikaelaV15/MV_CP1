@@ -15,7 +15,7 @@ hit_roll = random.randint(1,20) + player_attack
 
 if hit_roll > 12: 
     print("You hit! Roll for damage!")
-    damage_roll = random.randit(1,8) + player_damage
+    damage_roll = random.randit(1,8) +  random.randit(1,8) +  player_damage 
     if damage_roll > monster_defense:
         print(f"You did {damage_roll - monster_defense} damage.")
         monster_hp -= (damage_roll - monster_defense)
