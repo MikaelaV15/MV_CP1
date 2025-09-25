@@ -1,3 +1,4 @@
 # MV 1st What is my grade 
 
-input(
+grade = input("What is your grade: ")
+grade = input()
