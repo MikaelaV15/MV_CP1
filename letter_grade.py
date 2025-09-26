@@ -8,5 +8,5 @@ if grade > 80:
 elif grade == 100:
   print(f"Wow {grade} is a perfect score you have an A+")
 else: 
-  print(f"Woah that {grade} is not a passing score")
+  print(f"Woah that {grade} is not a passing score that is lower than a C") 
   
