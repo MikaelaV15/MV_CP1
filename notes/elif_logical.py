@@ -1,6 +1,6 @@
 # MV 1st elif and logical operators notes
 
-grade = 100
+grade = 70
 
 if grade > 100:
     print(f"You did extra credit... you did {grade -100}% extra credit!") 
