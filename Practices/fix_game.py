@@ -10,6 +10,7 @@ def start_game():
     game_over = False
     while not game_over:
         guess = int(input("Enter your guess: "))
+        attempts += 1 
         if attempts >= max_attempts:
             print(f"Sorry, you've used all {max_attempts} attempts. The number was {number_to_guess}.")
             game_over = True
