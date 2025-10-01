@@ -13,6 +13,5 @@ while True:
         item = input("What would you like to remove")
         shopping.remove(item) 
         print(f"{item} is now gone from your list")
-        
-    
-    
+    if action == 3:
+        print("Your list consists of")
