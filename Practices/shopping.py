@@ -11,9 +11,9 @@ while start == True:
         print(f"{add} is now in your list")
 
     elif action == 2:
-        item = input("What would you like to remove")
-        shopping.remove(item) 
-        print(f"{item} is now gone from your list")
+        food = input("What would you like to remove")
+        shopping.remove(food) 
+        print(f"{food} is now gone from your list")
     elif action == 3:
         print("Your list consists of:")
         print(shopping) 
