@@ -1,4 +1,11 @@
 # MV 1st Multiplication table 
+many = int(input("How big do you want your table to be? :"))
 
-base = [1,2,3,4,5,6,7,8,9,10,11,12]
+multiplication = 1 
 
+for num in range(1,many +1):
+    number = []
+    for i in range(1,13):
+       number.append(i*multiplication)
+    multiplication += 1
+    print(number) 
