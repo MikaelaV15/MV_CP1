@@ -55,3 +55,4 @@ while win == False:
     start = int(input("Do you want to continue if so pick 1, if you want to end pick 2:"))
     if start == 2:
         win = True 
+        print("I see you're leaving.... bye")

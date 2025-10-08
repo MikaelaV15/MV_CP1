@@ -1,0 +1,9 @@
+# MV 1st period 
+
+Make a grid of to two horizontal lines and two vertical lines that cross.
+
+Bring in a random number generator and a human. 
+
+Have human update the grid by placing an X somewhere on the 9 empty spaces.
+
+After the human has placed have the bot do the same thing but it can't place a O in any spot where the X is. 
