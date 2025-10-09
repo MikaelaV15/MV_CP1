@@ -1,9 +1,44 @@
 # MV 1st period 
 
 Make a grid of to two horizontal lines and two vertical lines that cross.
+show:
+_|_|_
+_|_|_
+ | | 
 
 Bring in a random number generator and a human. 
 
 Have human update the grid by placing an X somewhere on the 9 empty spaces.
 
 After the human has placed have the bot do the same thing but it can't place a O in any spot where the X is. 
+
+After human goes once and bot goes make sure to check for wins.
+
+Loop this action until one of the players gets three in a row, or if tie is made. 
+
+if "X" is on the middle spot and top right corner and bottom left corner it is a win. 
+if "X" has 3 spots on the right side going up and down it's a win. 
+if "X" has 3 spots on the top of the grid it's a win. 
+if "X" has 3 spots on the bottom of the grid it's a win. 
+if "X" has 3 spots on the left side going up and down its a win.
+if "X" has 3 spots in the middle going up and down it's a win. 
+
+if "O" is on the middle spot and top right corner and bottom left corner it is a win. 
+if "O" had 3 spots on the right side going up and down it's a win.
+if "O" has 3 spots on the top of the grid it's a win. 
+if "O" has 3 spots on the bottom of the grid it's a win.
+if "O" has 3 spots on the left side going up and down it's a win.
+if "O" has 3 spots in the middle going up and down it's a win. 
+
+if "O" is in the middle of 2 "X" on the right side going up and down it's a tie. 
+if "O" is in the middle of 2 "X" going diagonally  through the middle it's a tie.
+if "O" is in the middle of 2 "X" on the left side going up and down it's a tie. 
+if "O" is in the middle of 2 "X" at the top of the grid it's a tie
+if "O" is in the middle of 2 "X" at the bottom of the grid it's a tie. 
+if "O" is in the middle of 2 "X" in the middle going up and down it's a tie. 
+
+if  "X" is in the middle of 2 "O" on the right side going up and down it's a tie. 
+if "X" is in the middle of 2 "O" going diagonally through the middle it's a tie. 
+if "X" is in the middle of 2 "O" on the left side going up and down it"s a tie. 
+if "X" is in the middle of 2 "O" at the top of the grid its a tie. 
+if 
