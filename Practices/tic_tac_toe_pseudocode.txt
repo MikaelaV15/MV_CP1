@@ -41,4 +41,9 @@ if  "X" is in the middle of 2 "O" on the right side going up and down it's a tie
 if "X" is in the middle of 2 "O" going diagonally through the middle it's a tie. 
 if "X" is in the middle of 2 "O" on the left side going up and down it"s a tie. 
 if "X" is in the middle of 2 "O" at the top of the grid its a tie. 
-if 
+if "X" is in the middle of 2 "O" at the bottom of the grid its a tie. 
+if "X" is in the middle of 2 "X" in the middle going up it's a tie. 
+
+if either player wins end the game. 
+if the game ties end the game. 
+ask the player if they want to play again after the game end. 
