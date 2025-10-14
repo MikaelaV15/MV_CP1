@@ -77,7 +77,7 @@ while start == True:
     else: 
         ("Your password sucks")
 
-
+#End the code and ask if they want to check again
     start2 = int(input("do you want to check again if yes click 1 if no click 2"))
     if start2 == 2:
         start = False
