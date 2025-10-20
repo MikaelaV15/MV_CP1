@@ -12,4 +12,4 @@ while x < add(3,9):
     print("duck")
     x+= 1 
 
-print("GoOsE!")
+print("Goose")
