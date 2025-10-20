@@ -22,10 +22,10 @@ def start_game():
             game_over = True
         elif guess > number_to_guess:
             print("Too high! Try again.")
-            game_over = false 
+            game_over = False 
         elif guess < number_to_guess:
             print("Too low! Try again.") 
-            game_over = false
+            game_over = False
         continue
     print("Game Over. Thanks for playing!")
 start_game()
