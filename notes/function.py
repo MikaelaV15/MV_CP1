@@ -36,3 +36,4 @@ print(initials("Franco Barbosa"))
 
 print(f"a = {ord("a")}")
 print(f"98 = {chr(98)}")
+print(f"b = {ord("b")}")
