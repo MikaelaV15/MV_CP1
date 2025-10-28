@@ -27,4 +27,18 @@ def player(attack, monster_defense):
     return monster_damage 
 
 print("Welcome to the Combats, here you have to demolish a monster,what class of fighter are you? If you are a fighter press 1, if you are a mage press 2, if you are a rouge press 3")
-trainer = input("What class fighter are you?: ")
+
+fighter = int(input("What class fighter are you?: "))
+
+if fighter == 1: 
+    print("health = 30")
+    print("defense = 14")
+    print("attack = 0")
+elif fighter == 2:
+    print("health = 60")
+    print("defense = 28")
+    print("attack = 15")
+else:
+    print("health = 90")
+    print("defense = 42")
+    print("attack = 30")
