@@ -1,9 +1,5 @@
 #MV 1st period Caesar Cipher 
 
-#Capital ASCII letters start at 65 and end at 90 
-#Lowercase letters start at 97 and end at 122
-#MV 1st period Caesar Cipher 
-
 
 #Welcome to the Caesar Cipher for encode pick 1 for decode pick 2:
 def caesar_cipher(text,shift,mode):
