@@ -65,14 +65,33 @@ t6.pendown()
 t6.left(90)
 t6.forward(500)
 
-#Start the race, make it so that all the turtles move at different pixel spaces and calculate the  winner
+#make a variable/value for the finish line 
+finish_line = 500
 
-while True: 
+#make something for the race to start 
+
+race_start = True 
+
+#something for when the race is going on 
+while race_start:
+    #for turtle in turtles to get all the turtles to move at the same time 
     for turtle in turtles:
+        #randomly tell the computer to pick a random pace for all the turtles 
         turtle.forward(random.randint(1,10))
-    if turtle == t6:
-        winner = True 
-        if turtle.xcore() >= 550
-            winner = {turtle}
-            break 
-t.write("{turtle} wins!")
+    #What happens when one of the turtles reaches the finish line 
+    if turtle.xcor() >= finish_line: 
+         #Have the computer check which color turtle won 
+        winner_race = turtle.pencolor()
+        #Let the computer know that the race is over 
+        race_start = False 
+        #Have it announce who wins 
+        msg = t.Turtle() 
+        msg.hideturtle() 
+        msg.pendown 
+        msg.goto(0,-200) 
+        msg.write(f"The {winner_race} won the race! ")
+        #exit the loop 
+        break
+
+#end turtle 
+t.done() 
