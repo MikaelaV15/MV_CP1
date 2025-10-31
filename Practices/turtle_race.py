@@ -72,4 +72,7 @@ while True:
         turtle.forward(random.randint(1,10))
     if turtle == t6:
         winner = True 
-    
+        if turtle.xcore() >= 550
+            winner = {turtle}
+            break 
+t.write("{turtle} wins!")
