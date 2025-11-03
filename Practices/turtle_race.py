@@ -52,6 +52,7 @@ t5.color("pink")
 t5.shape("turtle")
 t5.penup()
 t5.setposition(20,100)
+t5.speed(10)
 t5.pendown()
 
 #create the finish line 
