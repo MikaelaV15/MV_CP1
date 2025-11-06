@@ -52,9 +52,7 @@ t5.color("pink")
 t5.shape("turtle")
 t5.penup()
 t5.setposition(20,100)
-t5.forward(50)
 t5.pendown()
-t5.speed(100)
 
 #create the finish line 
 t6.color("black")
@@ -81,7 +79,7 @@ while race_start:
         #randomly tell the computer to pick a random pace for all the turtles 
         turtle.forward(random.randint(1,10))
     #What happens when one of the turtles reaches the finish line 
-    if turtle.xcor() >= finish_line: 
+    if turtle.xcor <= finish_line: 
          #Have the computer check which color turtle won 
         winner_race = turtle.pencolor()
         #Let the computer know that the race is over 

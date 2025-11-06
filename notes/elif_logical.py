@@ -1,6 +1,7 @@
 # MV 1st elif and logical operators notes
+begin = True 
 
-grade = 70
+grade = int(input("What is your number grade?"))
 
 if grade > 100:
     print(f"You did extra credit... you did {grade -100}% extra credit!") 
@@ -15,3 +16,7 @@ elif grade == 99:
 else:
     print(f"you are so smart a {grade} is for nerds :) ")
 
+start = int(input("Would you like to check your grade for another class? if yes pick 1 if no pick 2"))
+if start == 2:
+    begin = False 
+    print("BYEE")

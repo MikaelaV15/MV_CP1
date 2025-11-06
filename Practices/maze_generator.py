@@ -1,29 +1,25 @@
 #MV 1st Maze generator 
-#import turtle and random 
-import turtle as t 
-import random as r
+#import turtle for the maze 
+import turtle 
+#import random for the walls 
+import random as r 
 
-#make variables 
+#make variables for the grid some must have numbers 
 rows = 6 
 columns = 6 
-row_grid = 6 
-column_grid = 6 
+cell = 50
+boxes = []
 
-#make the box 
-t.pendown
-position = 100 
-t.goto(0,position)
-t.penup
-t.forward(330)
-t.penup()
-t.forward(30)
-t.pendown()
-t.right(90)
-t.forward(360)
-t.right(90)
-t.forward(330)
-t.penup()
-t.forward(30)
-t.pendown()
-t.right(90)
-t.forward(360)
+#set up the turtle for the grid 
+def turtle_setup():
+    turtle.title("forgotten")
+    turtle.hideturtle
+    turtle.speed(5)
+    turtle.pensize(4)
+    turtle.penup
+
+#Set up the grid 
+#make funtions that make the walls random
+#Check that the grid is solvable 
+#return the maze
+#end turtle 
