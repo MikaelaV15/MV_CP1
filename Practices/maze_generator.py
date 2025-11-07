@@ -7,8 +7,24 @@ import random as r
 #make variables for the grid some must have numbers 
 rows = 6 
 columns = 6 
-cell = 50
+cells_size = 50
 boxes = []
+col_grid = [[1,1,1,1,1,1],
+            [1,1,1,1,1,1],
+            [1,1,1,1,1,1],
+            [1,1,1,1,1,1],
+            [1,1,1,1,1,1],
+            [1,1,1,1,1,1],]
+row_grid = [[1,1,1,1,1,1],
+            [1,1,1,1,1,1],
+            [1,1,1,1,1,1],
+            [1,1,1,1,1,1],
+            [1,1,1,1,1,1],
+            [1,1,1,1,1,1],] 
+walls = [] 
+visit = []
+
+
 
 #set up the turtle for the grid 
 def turtle_setup():
@@ -19,7 +35,32 @@ def turtle_setup():
     turtle.penup
 
 #Set up the grid 
+
+    
+
+    
+
+
+
+#Draw the grid 
+def grid_setup(boxes):
+    for i in range(rows*columns):
+        box = [1,1,1,1]
+        boxes.append(box)
+
 #make funtions that make the walls random
+     
+        
+
+
 #Check that the grid is solvable 
+
+
+
 #return the maze
+
+
+
+
 #end turtle 
+

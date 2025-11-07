@@ -1,28 +1,17 @@
 # MV 1st Libraries and built in functions 
-import turtle as t
-import random 
-color= ["orange", "green", "blue", "purple", "red"]
-side = random.randint(10,500)
-
-t.shape("turtle")
+import turtle 
 
 
 
-for x in range(1,4):
-    t.forward(side)
-    t.right(90)
-
-t.penup()
-t.goto(50,50)
-
-t.pendown()
-
-
-
-for x in range(1,4):
-    t.forward(side)
-    t.right(90)
-
-
-
-t.done()
+# Python program to draw 
+# Rainbow Benzene
+# using Turtle Programming
+import turtle
+colors = ['red', 'purple', 'blue', 'green', 'orange', 'yellow']
+t = turtle.Pen()
+turtle.bgcolor('black')
+for x in range(360):
+    t.pencolor(colors[x%6])
+    t.width(x//100 + 1)
+    t.forward(x)
+    t.left(59)
