@@ -5,22 +5,15 @@ import turtle
 import random as r 
 
 #make variables for the grid some must have numbers 
+back = setup() 
+pencolor = ("black")
+pen.speed(0)
+pen.hideturtle() 
+
+
 rows = 6 
 columns = 6 
-cells_size = 50
-boxes = []
-col_grid = [[1,1,1,1,1,1],
-            [1,1,1,1,1,1],
-            [1,1,1,1,1,1],
-            [1,1,1,1,1,1],
-            [1,1,1,1,1,1],
-            [1,1,1,1,1,1],]
-row_grid = [[1,1,1,1,1,1],
-            [1,1,1,1,1,1],
-            [1,1,1,1,1,1],
-            [1,1,1,1,1,1],
-            [1,1,1,1,1,1],
-            [1,1,1,1,1,1],] 
+cells_size = 30 
 walls = [] 
 visit = []
 
@@ -35,10 +28,23 @@ def turtle_setup():
     turtle.penup
 
 #Set up the grid 
-
+def setup():
+    back = turtle.Screen()
+    back.bgcolor("black") 
+    back.title("Maze Generator") 
+    return back 
     
 
-    
+#Draw one of the walls 
+def walls(): 
+            turtle.penup() 
+            turtle.goto() 
+            turtle.pendown() 
+            turtle.begin_fill()
+            for i in range(4):
+                        turtle.forward() 
+                        turtle.right(90) 
+            turtle.endfill 
 
 
 
