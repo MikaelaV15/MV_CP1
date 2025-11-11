@@ -5,19 +5,20 @@ import turtle
 import random as r 
 
 #make variables for the grid some must have numbers 
-back = setup() 
-pencolor = ("black")
-pen.speed(0)
-pen.hideturtle() 
-
 
 rows = 6 
 columns = 6 
 cells_size = 30 
+row_grid = []
+col_grid = [] 
 walls = [] 
 visit = []
 
-
+back = "Maze Generator"
+pencolor = ("black")
+t = turtle.Pen()
+t.speed(0)
+t.hideturtle()
 
 #set up the turtle for the grid 
 def turtle_setup():
@@ -36,15 +37,15 @@ def setup():
     
 
 #Draw one of the walls 
-def walls(): 
-            turtle.penup() 
-            turtle.goto() 
-            turtle.pendown() 
-            turtle.begin_fill()
-            for i in range(4):
-                        turtle.forward() 
-                        turtle.right(90) 
-            turtle.endfill 
+def walls():
+  turtle.penup() 
+  turtle.goto() 
+  turtle.pendown() 
+  turtle.begin_fill()
+  for i in range(4):
+        turtle.forward(cells_size) 
+        turtle.right(90) 
+turtle.end_fill()
 
 
 
@@ -52,21 +53,7 @@ def walls():
 def grid_setup(boxes):
     for i in range(rows*columns):
         box = [1,1,1,1]
-        boxes.append(box)
-
-#make funtions that make the walls random
-     
-        
+        boxes.append(boxes) 
 
 
-#Check that the grid is solvable 
-
-
-
-#return the maze
-
-
-
-
-#end turtle 
-
+turtle.done()
