@@ -54,6 +54,23 @@ for i in range(rows):
         t.penup()
         t.goto(-200,200 - ((i+1)*cells_size)) 
 
+t.penup() 
+t.goto(-200,200)
+
+for j in range(columns):
+            if grid_col[i][j] == 0: 
+                        t.penup()
+                        t.forward(cells_size)
+            if grid_col[i][j] == 1: 
+                        t.pendown() 
+                        t.forward(cells_size) 
+
+
+t.penup() 
+t.setheading(0)
+t.forward(cells_size) 
+t.setheading(-90)
+
 
 
 t.hideturtle()
