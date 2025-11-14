@@ -32,9 +32,9 @@ cells_size = 70
 
 #set up the turtle for the grid 
 t = turtle.Turtle() 
-t.speed() 
+t.speed(30) 
 t.color("black") 
-t.pensize(1) 
+t.pensize(3) 
 t.penup() 
 t.goto(-200,200) 
 
@@ -65,11 +65,65 @@ for j in range(columns):
                         t.pendown() 
                         t.forward(cells_size) 
 
+t.penup() 
+t.setheading(90)
+t.back(cells_size) 
+t.setheading(90)
+t.pendown() 
+t.forward(-280)
+
 
 t.penup() 
-t.setheading(0)
-t.forward(cells_size) 
-t.setheading(-90)
+t.goto(-200,200)
+
+t.penup() 
+t.setheading(90)
+t.back(cells_size) 
+t.setheading(90)
+t.pendown() 
+t.left(-180)
+
+
+t.penup() 
+t.goto(-200,200)
+
+t.penup() 
+t.setheading(90)
+t.back(cells_size) 
+t.setheading(90)
+t.pendown() 
+t.forward(-210)
+
+t.penup() 
+t.goto(10,200)
+
+t.penup() 
+t.setheading(90)
+t.back(cells_size) 
+t.setheading(90)
+t.pendown() 
+t.forward(cells_size)
+
+t.penup() 
+t.goto(80,200)
+
+t.penup() 
+t.setheading(90)
+t.back(cells_size) 
+t.setheading(90)
+t.pendown() 
+t.forward(cells_size)
+
+t.penup() 
+t.goto(85,150)
+
+t.penup() 
+t.setheading(90)
+t.back(cells_size) 
+t.setheading(90)
+t.pendown() 
+t.forward(cells_size)
+
 
 
 
