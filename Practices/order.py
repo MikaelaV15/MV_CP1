@@ -1,5 +1,6 @@
 #MV 1st order up practice 
 #Make a dictionary list 
+start = False  
 menu_burgers = {
     "bacon Mcdouble": 3.19,
     "Big Mac" : 4.99,
@@ -22,8 +23,32 @@ menu_sides = {
     "Mashed potatoes" : 4.75,
     "Mac and cheese" : 3.99
 }
-#Prompt the user tp select a drink and two side dishes 
 
+order = {}
+#Intoduce the user to the code 
+start = int(input("Hello welcome to Python Cafe if you want to order press 1 if you don't want to order press 2:"))
+if start == 1:
+    start = True
+if start == 2:
+    start = False 
+    print("Have a nice day!")
+while start == True:
+    while True:
+        for key, value in menu_burgers:
+            print(f"{key}: {value}")
+        order = input(f"What would you like to order out of the menu burgers?")
+        if order not in menu_burgers:
+            print("Not an option...")
+        else:
+            for key, value in menu_drinks:
+                 print(f"{key}: {value}")
+            order = input(f"What drink would you like out of menu drinks?")
+            if order not in menu_drinks:
+                print("That isn't a drink on the menu")
+                for key, value in menu_sides:
+                    print(f"{key}: {value}")
+                order = input(f"What sides would you like to order from menu sides?")
+                if order not in menu_sides:
+                    print("That is not on the menu_sides")
 
-#Make it check that all the items are in the list 
-
+#Let the user order 
