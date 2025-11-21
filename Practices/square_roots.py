@@ -5,3 +5,4 @@ numbers = [3, 7, 12, 25, 30, 45, 50, 65, 70, 85, 90, 105, 110, 125, 130, 145, 15
 new_numbers = map(lambda num:num**2, numbers)
 #make a loop 
 for numbers in new_numbers: 
+    
