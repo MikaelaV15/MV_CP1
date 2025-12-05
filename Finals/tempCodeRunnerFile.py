@@ -1,0 +1,2 @@
+
+        "lockpick" : "Replaces key",

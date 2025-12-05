@@ -2,28 +2,81 @@
 
 
 #import random for the rooms
+import random 
 #start is True 
+start = True  
 
 #Introduce the user to the game 
     #print("Welcome to doors! this is an adventure horror game")
+start = print("Welcome to doors! This is a textbase adventure horror game")
     #Give the instuccions of how the game works 
-    #print("in this game you will need to get through 50 doors all different and you will need to watch out for monsters and hints, in some rooms you might recieve a flashlight, a bandaid, a candle, keys for the next room, food, cross, papers, lockpicks. You will need to survive until door 50 to complete the game if you die there is no coming back. Good luck :) ")
+start = int(input("in this game you will need to get through 50 doors all different and you will need to watch out for monsters and hints, You will need to survive until door 50 to complete the game if you die there is no coming back. Good luck :), Press 3 to continue in the game "))
+
 
 #Create a list with all the items that the user can obtain during the game 
-#Name the list "Doors objects"
-
+if start == 3:
+    print("These are the objects in the game")
+    doors_objects = {
+        "Bandages" : "+20 health", 
+        "Flashlights" : "safety when light turns off",
+        "Candles" : "safety when lights turn off",
+        "Keys" : "To unlock next room",
+        "Food" : "+5 health", 
+        "Cross" : "safety from monsters",
+        "papers" : "Hints at keys in door 50",
+        "lockpick" : "Replaces key",
+        "vitamins" : "+5 health", 
+    }
+print(doors_objects)
 #give the user their stats 
+user_stats = 50
 #health 50/50 
+user_speed = 10
 #speed 10/10\
-
+print(user_stats)
 #track the users stats 
-    #once the user reaches 0 tell the user they died and ask them if they want to play again 
+if user_stats + 1:
+    print(user_stats)
+    #once the user reaches 0 tell the user they died and ask them if they 
+if user_stats == 0:
+    print("you died bye")
+    #want to play again 
+if print("you died bye"):
+    play = int(input("would you like to play again? Press 1 to play again, press 2 to leave"))
+    if play == 1:
+        start = True 
+    if play == 2: 
+        start = False
 
 #Create a function for the rooms 
      #def entrance(items)
         #Print there are 3 keys which one matches the door:
         #if user picks the wrong key they will loose 5 health
         #If user picks the right key they move on to next part
+
+while start == True:
+
+    def entrance(items):
+        print("there are three keys which one matches the door")
+        key = int(input("Which key would you like to pick 1-3?"))
+        if key == 1:
+            print("wrong key try again")
+            if key == 2: 
+                print("You got it the door unlocked")
+            if key == 3:
+                print("wrong key try again")
+                if key == 2: 
+                    print("You got it the door unlocked")
+        if key == 2: 
+                print("You got it the door unlocked")
+        if key == 3:
+                print("wrong key try again")
+                if key == 2: 
+                     print("You got it the door unlocked")
+                if key == 1: 
+                    print("wrong key try again")
+                    if key == 2: 
+                        print("You got it the door unlocked")
 
 
 #Make functions for all of the base of the rooms then randomly generate which one pops up
