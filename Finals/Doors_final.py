@@ -29,30 +29,22 @@ if start == 3:
     }
 print(doors_objects)
 #give the user their stats 
-user_stats = 50
+user_stats = print("your health is 50/50")
 #health 50/50 
-user_speed = 10
+user_speed = print("your speed is 10/10")
 #speed 10/10\
-print(user_stats)
+
 #track the users stats 
-if user_stats + 1:
-    print(user_stats)
     #once the user reaches 0 tell the user they died and ask them if they 
-if user_stats == 0:
-    print("you died bye")
     #want to play again 
-if print("you died bye"):
-    play = int(input("would you like to play again? Press 1 to play again, press 2 to leave"))
-    if play == 1:
-        start = True 
-    if play == 2: 
-        start = False
 
 #Create a function for the rooms 
      #def entrance(items)
         #Print there are 3 keys which one matches the door:
         #if user picks the wrong key they will loose 5 health
         #If user picks the right key they move on to next part
+
+
 
 while start == True:
 
@@ -78,25 +70,21 @@ while start == True:
                     if key == 2: 
                         print("You got it the door unlocked")
 
+def hallway(items):
+    print("In this hallway you have found a 3 drawer wardrobe which drawer would yoy like to open?")
+    drawer = int(input("pick a drawer 1-3"))
+    if drawer == 2:
+        print("you got a bandaid")
+        user_stats == print(55/50)
+    if drawer == 2: 
+        ("ROAR! the monster bit you")
+        user_stats == print(45/50)
+    if drawer == 3:
+        print("aww you found nothing :|")
+    room = int(input("press 2 to move to the next room"))
+    if room == 2:
 
-#Make functions for all of the base of the rooms then randomly generate which one pops up
-
-    #make the functions similar but each with different items in it or its own little catch
-
-#Make the part of the code that will randomly generate each of the rooms until the user reaches door 49 
-#use random 
-
-    #define the function hallway(items) 
-        #print(in this hallway you encountered a wardrobe which drawer would you like to open?)
-        #If user picks 2:
-            #You got a bandaid!
-        #If user picks 1:
-            #drawer monster attacks -5 health 
-            #print their health 45/50
-        #if user picks 3:
-            #Nothing!
-
-    #define room1(items)
+#define room1(items)
         #print("The door is locked find the key")
             #Would you like to check the room or the closet?
                 #If user says closet:
@@ -112,7 +100,20 @@ while start == True:
             #Option to use bandaid
             #If user uses bandaid +20 health 
             #print health 
-
+def room1(items):
+    print("The door is locked find the key")
+    check = int(input("if you would like to check the room press 1 or 2 for thecloset"))
+    if check == 1:
+        print("You found the key on the ground")
+        print("chk chk...oh no..")
+        whoops = int(input("There are 2 doors with different numbers which would you like to pick one or two"))
+        if whoops == 2:
+            print("it unlocked! good choice")
+        if whoops == 1:
+            print("oh no timmothy attacked you")
+            user_stats = print()
+    if check == 2:
+        print("oh no there is nothing")
     #define room2(items) 
         #Would you like to explore the room it has a bed and a closet.
             #if user says no 
