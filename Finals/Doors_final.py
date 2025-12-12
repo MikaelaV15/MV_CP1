@@ -24,34 +24,17 @@ doors_objects = {
         "lockpick" : "Replaces key",
         "vitamins" : "+5 health", 
     }
-print(doors_objects)
-user_stats = print("your beginning health is 50/50") 
-user_speed = print("your beginning speed is 10/10")
 
-start = int(input("To continue in the game press 3 :) "))
-if start == 3:
-    while win == False:
-        def entrance(items):
-            print("there are three keys which one matches the door")
+
+def entrance(items):
             key = int(input("Which key would you like to pick 1-3?"))
             if key == 1:
                 print("wrong key try again")
-                if key == 2: 
-                    print("You got it the door unlocked")
-                if key == 3:
-                    print("wrong key try again")
-                    if key == 2: 
-                        print("You got it the door unlocked")
             if key == 2: 
-                    print("You got it the door unlocked")
+                        print("You got it the door unlocked")
             if key == 3:
                     print("wrong key try again")
-                    if key == 2: 
-                        print("You got it the door unlocked")
-                    if key == 1: 
-                        print("wrong key try again")
-                        if key == 2: 
-                            print("You got it the door unlocked")
+
 
 def hallway(items):
     print("In this hallway you have found a 3 drawer wardrobe which drawer would yoy like to open?")
@@ -77,69 +60,90 @@ def hallway(items):
                     user_stats = print(35/50)
             if check == 2:
                 print("oh no there is nothing")
+                return hallway(items)
+print(doors_objects)
+user_stats = print("your beginning health is 50/50") 
+user_speed = print("your beginning speed is 10/10")
 
-        def room2(items): 
-            print("This room has a bed and a closet, would you like to explore?")
-            wander = int(input("Press 1 to wander or press 2 to continue to the next room"))
-            if wander == 1: 
-                item = int(input("press 6 to explore the bed or press 7 to explore the closet... you can only pick one ;)"))
-                if item == 6: 
-                    print("YOU FOUND A CROSS! THATS EXTRA LEGENDARY YOU CAN USE THIS ON A MONSTER TO CHAIN THEM")
-                if item == 7: 
-                    print("There is nothing Womp Womp :)")
-        def room3(items): 
-            monster = int(input("would you like to explore? press 1 if yes press 2 to move through"))
-            if monster <= 3: 
-                rush = int(input("Oh no, the lights are flickerign press 10 to go to the closet press 67 to hide in the wardrobe"))
-                if rush == 10: 
-                    print("YAY, YOU SURVIVED WOOHOOO")
-                if rush == 67: 
-                    print("NOO MY DEAR FRIEND YOU DIED!")
-    #define room4(items) 
-    #print this room is empty just walk through 
-        def room4(items): 
-            print("this room is empty :)")
-        def room5(items): 
-            locked_door = int(input("this room is locked press 76 to check the bed and 89 to check the closet to find the key"))
-            if locked_door == 89:
-                check = int(input("To check the bed now press 99"))
-                if check == 99: 
-                    locked = int(input("Good job.. you found a lockpick press 3 to use it"))
-                    if locked == 3:
-                        print("Great job lets move on")
+starts = int(input("to play press 3: "))
+if starts == 3:
+    while win == False:
+        entrance("key")
+        hallway("drawer", "check", "whoops")
+
+def room2(items): 
+    print("This room has a bed and a closet, would you like to explore?")
+    wander = int(input("Press 1 to wander or press 2 to continue to the next room"))
+    if wander == 1: 
+        item = int(input("press 6 to explore the bed or press 7 to explore the closet... you can only pick one ;)"))
+        if item == 6: 
+            print("YOU FOUND A CROSS! THATS EXTRA LEGENDARY YOU CAN USE THIS ON A MONSTER TO CHAIN THEM")
+        if item == 7: 
+            print("There is nothing Womp Womp :)")
+            
+def room3(items): 
+    monster = int(input("would you like to explore? press 1 if yes press 2 to move through"))
+    if monster <= 3: 
+        rush = int(input("Oh no, the lights are flickerign press 10 to go to the closet press 67 to hide in the wardrobe"))
+        if rush == 10: 
+            print("YAY, YOU SURVIVED WOOHOOO")
+        if rush == 67: 
+            print("NOO MY DEAR FRIEND YOU DIED!")
+
+
+def room4(items):
+        print("this room is empty :)")
+
+
+def room5(items): 
+    locked_door = int(input("this room is locked press 76 to check the bed and 89 to check the closet to find the key"))
+    if locked_door == 89:
+        check = int(input("To check the bed now press 99"))
+        if check == 99: 
+            locked = int(input("Good job.. you found a lockpick press 3 to use it"))
+            if locked == 3:
+                print("Great job lets move on")
             if locked_door == 76: 
                 locked = int(input("Good job.. you found a lockpick press 3 to use it"))
                 if locked == 3: 
                     print("great job lets move on")
-        def room6(items): 
-            hallway_locked = int(input("You are now in a hallway that has a locked door.. press 3 to go left, press 100 to turn right or press 45 to go straight ahead"))
-            if hallway_locked == 3:
-                beds = int(input("there is a bed a drawer and a typewriter press 1 to search the bed press 8 to checck the drawer and 67 to check the typewriter "))
-                if beds == 1: 
-                    print("theres nothing there")
-                    check = int(input("press 8 to check the drawer and 67 to check the typewriter"))
-                    if check == 8: 
-                        print("theres nothing there")
-                        check_again = int(input("press 67 to check the typewriter"))
-                        if check_again == 67: 
-                            print("there's nothing there..")
-                if beds == 8:
-                    print("theres nothing there") 
-                    check = int(input("press 1 to check the bed and 67 to check the typewriter"))
-                    if check == 1: 
-                        print("theres nothing there")
-                        check_again = int(input("press 67 to check the typewriter"))
-                        if check_again == 67: 
-                            print("there's nothing there..")
-                if beds == 67: 
-                    print("There's nothing there..")
-                    check = int(input("press 1 to check the bed and 8 to check the drawer"))
-                    if check == 1: 
-                        print("theres nothing there")
-                        check_again = int(input("press 8 to check the drawer"))
-                        if check_again == 8: 
-                            print("there's nothing there..")
-            
+
+
+def room6(items): 
+    hallway_locked = int(input("You are now in a hallway that has a locked door.. press 3 to go left, press 100 to turn right or press 45 to go straight ahead"))
+    if hallway_locked == 3:
+        beds = int(input("there is a bed a drawer and a typewriter press 1 to search the bed press 8 to checck the drawer and 67 to check the typewriter "))
+        if beds == 1: 
+            print("theres nothing there")
+            check = int(input("press 8 to check the drawer and 67 to check the typewriter"))
+            if check == 8: 
+                print("theres nothing there")
+                check_again = int(input("press 67 to check the typewriter"))
+                if check_again == 67: 
+                    print("there's nothing there..")
+        if beds == 8:
+            print("theres nothing there") 
+            check = int(input("press 1 to check the bed and 67 to check the typewriter"))
+            if check == 1: 
+                print("theres nothing there")
+                check_again = int(input("press 67 to check the typewriter"))
+                if check_again == 67: 
+                    print("there's nothing there..")
+        if beds == 67: 
+            print("There's nothing there..")
+            check = int(input("press 1 to check the bed and 8 to check the drawer"))
+            if check == 1: 
+                print("theres nothing there")
+                check_again = int(input("press 8 to check the drawer"))
+                if check_again == 8: 
+                    print("there's nothing there..")
+        if hallway_locked == 100: 
+            typewriter = int(input("This room has a bed and a wardrobe press 45 to check the bed or press 60 to check the wardrobe beware you can only pick one.."))
+            if typewriter == 60: 
+                print("oh no there is nothing there..")
+            if typewriter == 45: 
+                print("youuu are out of luckkk its empty")
+
 
     #define room6(items) 
         #this is a hallway with other rooms and the door is locked 
@@ -155,14 +159,11 @@ def hallway(items):
                 #make it so once they pick one they can pick another one 
             #once user has searched everything give it the option to move to another room 
             #if user says right 
-                #This room has a wardrobe a bed and a desk which one would you like to search? 
+                #This room has a wardrobe and a bed which one would you like to search? 
                     #if user says wardrobe
                         #print(There is nothing there)
                     #if user says bed 
                         #print(there is nothing there) 
-                    #if user says desk 
-                        #print(There is nothing there)
-                #make it so once they pick one they can pick another one 
             #once the user has checked everything give it the option to move on to the next room 
             #Take user to the next room 
                 #This room has a wardrobe a box a desk and a drawer 
