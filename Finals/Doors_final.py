@@ -5,7 +5,7 @@
 #import random for the rooms
 import random 
 #start is True 
-win = False
+die = False
 
 #Introduce the user to the game 
     #print("Welcome to doors! this is an adventure horror game")
@@ -34,6 +34,7 @@ def entrance(items):
                         print("You got it the door unlocked")
             if key == 3:
                     print("wrong key try again")
+                    return entrance(items) 
 
 
 def hallway(items):
@@ -61,15 +62,11 @@ def hallway(items):
             if check == 2:
                 print("oh no there is nothing")
                 return hallway(items)
+            
 print(doors_objects)
 user_stats = print("your beginning health is 50/50") 
 user_speed = print("your beginning speed is 10/10")
 
-starts = int(input("to play press 3: "))
-if starts == 3:
-    while win == False:
-        entrance("key")
-        hallway("drawer", "check", "whoops")
 
 def room2(items): 
     print("This room has a bed and a closet, would you like to explore?")
@@ -80,6 +77,7 @@ def room2(items):
             print("YOU FOUND A CROSS! THATS EXTRA LEGENDARY YOU CAN USE THIS ON A MONSTER TO CHAIN THEM")
         if item == 7: 
             print("There is nothing Womp Womp :)")
+            return room2(items) 
             
 def room3(items): 
     monster = int(input("would you like to explore? press 1 if yes press 2 to move through"))
@@ -89,10 +87,13 @@ def room3(items):
             print("YAY, YOU SURVIVED WOOHOOO")
         if rush == 67: 
             print("NOO MY DEAR FRIEND YOU DIED!")
+            die = True 
+            return room3(items) 
 
 
 def room4(items):
-        print("this room is empty :)")
+        empty = input("this room is empty :)")
+        return room4(items)
 
 
 def room5(items): 
@@ -107,6 +108,7 @@ def room5(items):
                 locked = int(input("Good job.. you found a lockpick press 3 to use it"))
                 if locked == 3: 
                     print("great job lets move on")
+                    return room5(items)
 
 
 def room6(items): 
@@ -142,96 +144,181 @@ def room6(items):
             if typewriter == 60: 
                 print("oh no there is nothing there..")
             if typewriter == 45: 
-                print("youuu are out of luckkk its empty")
+                print("youuu found the key!")
+                return room6(items) 
 
 
-    #define room6(items) 
-        #this is a hallway with other rooms and the door is locked 
-        #which way you you like to turn? left, right, or straight ahead?
-            #if user says left 
-                #This room has a bed a drawer and a type writer which would you like to search?
-                    #if user says bed 
-                        #print(There is nothing there)
-                    #if user says drawer 
-                        #print(there is nothing there) 
-                    #if user says typewriter 
-                        #print(There is nothing there)
-                #make it so once they pick one they can pick another one 
-            #once user has searched everything give it the option to move to another room 
-            #if user says right 
-                #This room has a wardrobe and a bed which one would you like to search? 
-                    #if user says wardrobe
-                        #print(There is nothing there)
-                    #if user says bed 
-                        #print(there is nothing there) 
-            #once the user has checked everything give it the option to move on to the next room 
-            #Take user to the next room 
-                #This room has a wardrobe a box a desk and a drawer 
-                    #if user says wardrobe 
-                        #print(there is a bandaid would you like to use it?)
-                        #if user says yes +20 health 
-                        #if user says no make the user check the next part 
-                    #if user says desk 
-                        #print there is a flashlight would you like to use it?
-                        #if user says yes out it in inventory
-                    #if user says drawer 
-                        #print(there is nothing there)
-                    #if user says box 
-                        #you found the key go unlock the door 
-                #once the user unlocks the door continue to the next part 
 
-    #define room7(items)
-        #this room has a monster dont look into its eyes dont turn your head to the left 
-            #ask the user which way they would like to go 
-                #if user says right 
-                    #move on into the next room
-                #if user says forward 
-                    #move onto the next room
-                #if user says backward
-                    #move onto the next room 
-                #if user says left 
-                    #You died 
-    #define room8(items) 
-        #You have reached the outdoors you are now in the courtyard you have to find a metal key in order to get back in
-            #which way would you like to go? (Left, right, or forward?)
-            #if the user says right 
-                #You find a chest but its locked 
-                    #ask the user what way they want to go next     
-            #if user says left 
-                #you found a lockpick would you like to pick it up?
-                    #if user says yes place it in the inventory 
-                            #ask the user if they still want to look for the key
-                    #if user says no ask it what way then want to go next
-            #if the user says forward 
-                #congrats you found the key press 2 to pick it up 
-                    #would you like to unlock the door now or explore?
-                        #if user says unlock the door take it to the door
-                        #if the user says explore take them to the arch 
-                            #welcome to the arch here you can find vitamins would you like them?
-                                #if user says yes give them +5 speed
-                                #if user says no take them to unlock the room
+def room7(items):
+    eyes = int(input("This room has a monster turn left(press 5) to escape it"))
+    if eyes == 5: 
+        print("good job you survived!")
+    else: 
+        print("you died") 
+        die = True 
+        return room7(items)
+
+def room8(items): 
+    print("You have reached the outdoors you are in the courtyard you need a ket to get back in")
+    direction = int(input("Would you like to go left = 1, right = 2, forward = 4?"))
+    if direction == 1: 
+        print("you found an empty chest")
+    if direction == 2: 
+        print("You found a lockpick")
+        lockpick = int(input("Press 6 to use the lockpick"))
+        if lockpick == 6:
+            print("Great you moved on")
+        else: 
+            ("let's continue")
+    if direction == 4: 
+        print("you found the key!..good luck in the next part..")
+        return room8(items)
 
 
-#define the CHASE
-        #user walks in normally 
-            #once user reaches the last 1/3 tell them a screeching noise appears 
-                #show (Oh no you have reached the door with SEEK!)
-            #the user starts running 
-            #oh no the bookshelf fell press 2 to crouch 
-                #if user crouches keep running 
-                #if user does not crouch 
-                    #show (oh no seek caught up to you, bye bye)
-            #Oh my there is a closet in the way press 4 to turn right 
-                #if user presses 4 keep running 
-                #if the user presses another number 
-                    #show (oh no seek caught you... bye bye)
-            #The end... or so you think 
-            #There is fire up ahead press 7 to turn left 
-                #if user presses 7 the chase finishes
-                #if user presses another number 
-                    #show (oh no seek caught you..bye bye)
-        #if user survives all obstacles 
-            #Show (You survived the chase lets go to the next room)
+def chase(running): 
+    print("woah you have reached a long hallway")
+    run = int(input("Press 7 to continue")) 
+    if run == 7:
+        print("OH NO SEEK HAS COME TO CHASE YOU!!!")
+        survive = int(input("The bookshelf fell press 19867 to continue"))
+        if survive == 19867: 
+            print("phew that was a close one..") 
+        else: 
+            print("you died")
+            die = True
+        survive2 = int(input("There is a bookshelf in the way press 4689856 to continue"))
+        if survive2 == 4689856: 
+            print("phew you survived")
+        else: 
+            print("ypu died")
+            die = True
+        survive3 = int(input("There is one last obstacle survive without burning! press 2010 to survive"))
+        if survive3: 
+            print("YAY YOU SURVIVED AGAINST SEEK")
+        else: 
+            print("you died..")
+            die = True 
+            return chase(running)
+
+
+def room9(items): 
+    locked_door = int(input("this room is locked press 76 to check the bed and 89 to check the closet to find the key"))
+    if locked_door == 89:
+        check = int(input("To check the bed now press 99"))
+        if check == 99: 
+            locked = int(input("Good job.. you found a lockpick press 3 to use it"))
+            if locked == 3:
+                print("Great job lets move on")
+            if locked_door == 76: 
+                locked = int(input("Good job.. you found a lockpick press 3 to use it"))
+                if locked == 3: 
+                    print("great job lets move on")
+                    return room9(items)
+
+
+def room10(items):
+        empty = input("this room is empty :)")
+        return room10(items)
+
+
+
+def room11(items): 
+    locked_door = int(input("this room is locked press 76 to check the bed and 89 to check the closet to find the key"))
+    if locked_door == 89:
+        check = int(input("To check the bed now press 99"))
+        if check == 99: 
+            locked = int(input("Good job.. you found a lockpick press 3 to use it"))
+            if locked == 3:
+                print("Great job lets move on")
+            if locked_door == 76: 
+                locked = int(input("Good job.. you found a lockpick press 3 to use it"))
+                if locked == 3: 
+                    print("great job lets move on")
+                    return room11(items)
+
+
+
+
+def hallway2(items):
+    print("In this hallway you have found a 3 drawer wardrobe which drawer would yoy like to open?")
+    drawer = int(input("pick a drawer 1-3"))
+    if drawer == 2:
+        print("you got a bandaid")
+    if drawer == 2: 
+        ("ROAR! the monster bit you")
+        user_stats == print(45/50)
+    if drawer == 3:
+        print("aww you found nothing :|")
+        return hallway(items)
+
+
+def room12(items):
+    print("The door is locked find the key")
+    check = int(input("if you would like to check the room press 1 or 2 for thecloset"))
+    if check == 1:
+        print("You found the key on the ground")
+        print("chk chk...oh no..")
+        whoops = int(input("There are 2 doors with different numbers which would you like to pick one or two"))
+        if whoops == 2:
+            print("it unlocked! good choice")
+        if whoops == 1:
+            print("oh no timmothy attacked you")
+            user_stats = print(35/50)
+    if check == 2:
+        print("oh no there is nothing")
+        return room12(items)
+
+
+
+
+starts = int(input("to play press 3: "))
+if starts == 3:
+    while die == False:
+        entrance("key")
+        hallway("drawer")
+        hallway("check")
+        hallway("whoops")
+        room2("wander")
+        room2("item")
+        room3("monster")
+        room3("rush")
+        room4("empty")
+        room5("locked_door")
+        room5("check")
+        room5("locked")
+        room6("hallway_locked")
+        room6("beds")
+        room6("check")
+        room6("check_again")
+        room6("typewriter")
+        room7("eyes")
+        room8("direction")
+        room8("lockpick")
+        chase("run")
+        chase("survive")
+        chase("survive2")
+        chase("survive3")
+        room9("locked_door")
+        room9("check")
+        room9("locked")
+        room10("empty")
+        room11("locked_door")
+        room11("check")
+        room11("locked")
+        hallway2("drawer")
+        room12("check")
+        room12("whoops")
+        
+
+
+       
+
+
+
+
+
+
+        
 
 #Make a function for the final obstacle 
 #show : Wow, great job you have made it to door 50, you will have to collect 4 keys in order to escape...This room is like a garage and a monster will be in here... when the monster is near you must stop moving. The keys will be hidden in drawers or just on the ground.. good luck and dont get caught
