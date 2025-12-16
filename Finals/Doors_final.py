@@ -1,9 +1,6 @@
 # MV 1st Doors final 
 #MV 1st Doors Final Game 
 
-
-#import random for the rooms
-import random 
 #start is True 
 die = False
 
@@ -31,7 +28,7 @@ def entrance(items):
             if key == 1:
                 print("wrong key try again")
             if key == 2: 
-                        print("You got it the door unlocked")
+                print("You got it the door unlocked")
             if key == 3:
                     print("wrong key try again")
                     return entrance(items) 
@@ -54,11 +51,10 @@ def hallway(items):
                 print("You found the key on the ground")
                 print("chk chk...oh no..")
                 whoops = int(input("There are 2 doors with different numbers which would you like to pick one or two"))
-                if whoops == 2:
-                    print("it unlocked! good choice")
                 if whoops == 1:
                     print("oh no timmothy attacked you")
-                    user_stats = print(35/50)
+                else:
+                    print("it unlocked! good choice")
             if check == 2:
                 print("oh no there is nothing")
                 return hallway(items)
@@ -88,12 +84,7 @@ def room3(items):
         if rush == 67: 
             print("NOO MY DEAR FRIEND YOU DIED!")
             die = True 
-            return room3(items) 
-
-
-def room4(items):
-        empty = input("this room is empty :)")
-        return room4(items)
+            return room3(items)
 
 
 def room5(items): 
@@ -104,11 +95,11 @@ def room5(items):
             locked = int(input("Good job.. you found a lockpick press 3 to use it"))
             if locked == 3:
                 print("Great job lets move on")
-            if locked_door == 76: 
-                locked = int(input("Good job.. you found a lockpick press 3 to use it"))
-                if locked == 3: 
-                    print("great job lets move on")
-                    return room5(items)
+    if locked_door == 76: 
+        locked = int(input("Good job.. you found a lockpick press 3 to use it"))
+        if locked == 3:
+            print("great job lets move on")
+            return room5(items)
 
 
 def room6(items): 
@@ -216,11 +207,6 @@ def room9(items):
                     return room9(items)
 
 
-def room10(items):
-        empty = input("this room is empty :)")
-        return room10(items)
-
-
 
 def room11(items): 
     locked_door = int(input("this room is locked press 76 to check the bed and 89 to check the closet to find the key"))
@@ -251,7 +237,6 @@ def hallway2(items):
         print("aww you found nothing :|")
         return hallway(items)
 
-
 def room12(items):
     print("The door is locked find the key")
     check = int(input("if you would like to check the room press 1 or 2 for thecloset"))
@@ -269,6 +254,33 @@ def room12(items):
         return room12(items)
 
 
+def final(items):
+    print("welcome to the final door of the game, in this part you will need to fight the monster")
+    fight = int(input("press 34567893465 to punch the monster or press 45 to get punched"))
+    if fight == 34567893465:
+        print("The monster lost 10 damage 4 hits left")
+    if fight == 45:
+        print("oh no the monster hit you") 
+        fighting_again = int(input("you won the first time try winning now hahaha... to punch him press 67 to get punched press 76"))
+        if fighting_again == 67:
+            print("hahaha i tricked you now you only have 5 health left")
+        elif fighting_again == 76:
+            print("you are smart you made the monster lose 35 health")
+        else:
+            print("you died")
+        die = True 
+            last_fight = int(input("Dont get tricked press 898998 to hit the monster or press 676776 to get beat up"))
+            if last_fight == 898998:
+                print("YOU SURVIVED AMAZING JOB WOOHOO")
+            elif last_fight == 676776: 
+                print("OH NO YOU DIED BOOHOO")
+                die = True 
+            else:
+                print("you died")
+                die = True 
+                return final(items)
+
+
 
 
 starts = int(input("to play press 3: "))
@@ -282,7 +294,6 @@ if starts == 3:
         room2("item")
         room3("monster")
         room3("rush")
-        room4("empty")
         room5("locked_door")
         room5("check")
         room5("locked")
@@ -301,37 +312,13 @@ if starts == 3:
         room9("locked_door")
         room9("check")
         room9("locked")
-        room10("empty")
         room11("locked_door")
         room11("check")
         room11("locked")
         hallway2("drawer")
         room12("check")
         room12("whoops")
+        final("fight")
+        final("fighting again")
+        final("last_fight")
         
-
-
-       
-
-
-
-
-
-
-        
-
-#Make a function for the final obstacle 
-#show : Wow, great job you have made it to door 50, you will have to collect 4 keys in order to escape...This room is like a garage and a monster will be in here... when the monster is near you must stop moving. The keys will be hidden in drawers or just on the ground.. good luck and dont get caught
-
-
-    #Ask the user what way they would like to go every time 
-    #make it so the monster appears once in a while and the user has to stop moving 
-    #Make it so if the user moves the user dies 
-    #after the user collects all keys the must quietly go unlock the door 
-    #If they get caught they die 
-    #make dead ends where the user can die 
-    #once the user makes it out they will get the award 
-    #if the user died ask them to play again 
-
-    #once user wins give them a trophy of achievement 
-    #ask them to play
